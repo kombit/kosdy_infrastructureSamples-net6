@@ -1,0 +1,22 @@
+{
+  "providerId": "Microsoft.Tools.ServiceModel.Svcutil",
+  "version": "2.1.0",
+  "options": {
+    "inputs": [
+      "../../wsdl/Klasse/wsdl/GenerelleDefinitioner.xsd",
+      "../../wsdl/Klasse/wsdl/Klasse.xsd",
+      "../../wsdl/Klasse/wsdl/KlasseBesked.xsd",
+      "../../wsdl/Klasse/wsdl/KlasseOperationer.xsd",
+      "../../wsdl/Klasse/wsdl/KlasseService.wsdl",
+      "../../wsdl/Klasse/wsdl/OIOIDWS.wsdl",
+      "../../wsdl/Klasse/wsdl/RequestHeader.xsd",
+      "../../wsdl/Klasse/wsdl/SagDokObjekt.xsd"
+    ],
+    "namespaceMappings": [
+      "*, Kombit.InfrastructureSamples.Klassifikation"
+    ],
+    "outputFile": "KlasseService.cs",
+    "targetFramework": "net7.0",
+    "typeReuseMode": "All"
+  }
+}

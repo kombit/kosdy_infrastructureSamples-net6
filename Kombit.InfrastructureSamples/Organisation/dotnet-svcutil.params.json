@@ -1,0 +1,23 @@
+{
+  "providerId": "Microsoft.Tools.ServiceModel.Svcutil",
+  "version": "2.1.0",
+  "options": {
+    "inputs": [
+      "../../wsdl/Virksomhed/wsdl/GenerelleDefinitioner.xsd",
+      "../../wsdl/Virksomhed/wsdl/OIOIDWS.wsdl",
+      "../../wsdl/Virksomhed/wsdl/Part.xsd",
+      "../../wsdl/Virksomhed/wsdl/RequestHeader.xsd",
+      "../../wsdl/Virksomhed/wsdl/SagDokObjekt.xsd",
+      "../../wsdl/Virksomhed/wsdl/Virksomhed.wsdl",
+      "../../wsdl/Virksomhed/wsdl/Virksomhed.xsd",
+      "../../wsdl/Virksomhed/wsdl/VirksomhedBesked.xsd",
+      "../../wsdl/Virksomhed/wsdl/VirksomhedOperationer.xsd"
+    ],
+    "namespaceMappings": [
+      "*, Kombit.InfrastructureSamples.VirksomhedService"
+    ],
+    "outputFile": "VirksomhedService.cs",
+    "targetFramework": "net7.0",
+    "typeReuseMode": "All"
+  }
+}

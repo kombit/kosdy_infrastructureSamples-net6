@@ -1,0 +1,29 @@
+{
+  "providerId": "Microsoft.Tools.ServiceModel.Svcutil",
+  "version": "2.1.0",
+  "options": {
+    "inputs": [
+      "../../wsdl/SagDokumentIndeks/wsdl2/SagDokumentIndeksService_6.wsdl",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/6.0.STS-0/DokumentIndeks.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/6.0.STS-0/DokumentIndeksOperationer.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/6.0.STS-0/GenerelleDefinitioner.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/6.0.STS-0/GenerelleOperationer.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/6.0.STS-0/Sag.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/6.0.STS-0/SagBesked.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/6.0.STS-0/SagDokumentIndeksOperationer.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/6.0.STS-0/SagIndeks.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/6.0.STS-0/SagIndeksOperationer.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/6.0.STS-0/SagOperationer.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/common/RequestHeader.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/common/SagDokObjekt.xsd",
+      "../../wsdl/SagDokumentIndeks/wsdl2/xsd/policies/OIOIDWS.wsdl"
+    ],
+    "namespaceMappings": [
+      "*, Kombit.InfrastructureSamples.SagDokumentIndeksService"
+    ],
+    "outputFile": "SagDokumentIndeksService.cs",
+    "sync": true,
+    "targetFramework": "net7.0",
+    "typeReuseMode": "All"
+  }
+}

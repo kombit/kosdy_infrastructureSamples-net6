@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kombit.InfrastructureSamples", "Kombit.InfrastructureSamples\Kombit.InfrastructureSamples.csproj", "{3D380C74-011A-4DE3-AF8F-0E4FC7071115}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kombit.InfrastructureSamples.UnitTests", "Kombit.InfrastructureSamples.UnitTests\Kombit.InfrastructureSamples.UnitTests.csproj", "{623E82C6-B120-4C20-B7EA-88F5A3AF4007}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D380C74-011A-4DE3-AF8F-0E4FC7071115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D380C74-011A-4DE3-AF8F-0E4FC7071115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D380C74-011A-4DE3-AF8F-0E4FC7071115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D380C74-011A-4DE3-AF8F-0E4FC7071115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{623E82C6-B120-4C20-B7EA-88F5A3AF4007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{623E82C6-B120-4C20-B7EA-88F5A3AF4007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{623E82C6-B120-4C20-B7EA-88F5A3AF4007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{623E82C6-B120-4C20-B7EA-88F5A3AF4007}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24625647-5D3A-4B1B-942B-84E7974D5380}
+	EndGlobalSection
+EndGlobal
