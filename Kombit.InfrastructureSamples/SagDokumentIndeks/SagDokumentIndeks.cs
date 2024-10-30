@@ -359,6 +359,592 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
             return response; 
         }
 
+        public opdaterResponse Opdater(string sagUuid)
+        {
+            opdaterRequest request = new opdaterRequest()
+            {
+                RequestHeader = RequestHeader,
+                OpdaterSagDokumentIndeksInput = new RetInputType[] { new OpdaterDokumentIndeksInputType() {
+                    AttributListe = new AttributListeType {
+                        Egenskaber = new[] { new EgenskaberType() {
+                            Beskrivelse = "ÆØP",
+                            Type = SagDokumentIndeksService.Type.Andet,
+                            TypeSpecified = true,
+                            Kassationskode = "ÆØÅ",
+                            BrugervendtNoegle = "ÆØÅ",
+                            Foelsomhed = FoelsomhedType.IKKE_FORTROLIGE_DATA,
+                            FoelsomhedSpecified = true,
+                            BrevDato = DateTime.Now,
+                            BrevDatoSpecified = true,
+                            Dokumentnummer = "ÆØÅ",
+                            OffentlighedUndtaget = new OffentlighedUndtagetType() {
+                                OffentlighedUndtagetHjemmelTekst = "ÆØÅ",
+                                TitelAlternativTekst = "ÆØÅ"
+                            },
+                            Titel = "ÆØÅ",
+                            UnderversionIdentifikator = "ÆØÅ",
+                            VersionIdentifikator = "ÆØÅ",
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                }
+                            },
+                        }
+                        },
+                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                            Any = new [] {
+                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                            },
+                            SenestAendretTidspunkt = DateTime.Now,
+                            SenestAendretTidspunktSpecified = true
+                        },
+                    },
+                    TilstandListe = new TilstandListeType() {
+                        Fremdrift = new[] { new FremdriftType() {
+                            FremdriftStatusKode = FremdriftStatusKodeType.Afleveret,
+                            FremdriftStatusKodeSpecified = true,
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                }
+                            },
+                        }
+                        },
+                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                            Any = new [] {
+                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                            },
+                            SenestAendretTidspunkt = DateTime.Now,
+                            SenestAendretTidspunktSpecified = true
+                        },
+                    },
+                    RelationListe = new RelationListeType() {
+                        Dokumentaktoer = new[] { new RelationType() {
+                            Indeks = "ÆØÅ",
+                            Rolle = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Type = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            ReferenceID = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+
+                            },
+                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                Any = new [] {
+                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                },
+                                SenestAendretTidspunkt = DateTime.Now,
+                                SenestAendretTidspunktSpecified = true
+                            },
+                        }
+                        },
+                        Dokumentklasse = new[] { new RelationType() {
+                            Indeks = "ÆØÅ",
+                            Rolle = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Type = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            ReferenceID = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+
+                            },
+                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                Any = new [] {
+                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                },
+                                SenestAendretTidspunkt = DateTime.Now,
+                                SenestAendretTidspunktSpecified = true
+                            },
+                        }
+                        },
+                        Dokumentpart = new[] { new RelationType() {
+                            Indeks = "ÆØÅ",
+                            Rolle = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Type = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            ReferenceID = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+
+                            },
+                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                Any = new [] {
+                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                },
+                                SenestAendretTidspunkt = DateTime.Now,
+                                SenestAendretTidspunktSpecified = true
+                            },
+                        }
+                        },
+                        Dokumentrelation = new[] { new RelationType() {
+                            Indeks = "ÆØÅ",
+                            Rolle = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Type = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            ReferenceID = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+
+                            },
+                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                Any = new [] {
+                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                },
+                                SenestAendretTidspunkt = DateTime.Now,
+                                SenestAendretTidspunktSpecified = true
+                            },
+                        }
+                        },
+                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                            Any = new [] {
+                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                            },
+                            SenestAendretTidspunkt = DateTime.Now,
+                            SenestAendretTidspunktSpecified = true
+                        },
+                    },
+                    NoteTekst = "ÆØÅ",
+                    UUIDIdentifikator = "ÆØÅ",
+                    Tidspunkt = DateTime.Now,
+                }, new OpdaterSagIndeksInputType() {
+                    AttributListe = new AttributListeType1() {
+                        Egenskaber = new[] { new EgenskaberType1() {
+                            BrugervendtNoegle = "ÆØÅ",
+                            Beskrivelse = "ÆØÅ",
+                            Kassationskode = "ÆØÅ",
+                            Titel = "ÆØÅ",
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+
+                            },
+                            Sagsnummer = "ÆØÅ",
+                            AfleveretIndikator = true,
+                            HjemmelSpecifikation = "ÆØÅ",
+                            OffentlighedUndtaget = new OffentlighedUndtagetType() {
+                                OffentlighedUndtagetHjemmelTekst = "ÆØÅ",
+                                TitelAlternativTekst = "ÆØÅ"
+                            },
+                            PrincipielIndikator = true,
+                            AfleveretIndikatorSpecified = true,
+                            PrincipielIndikatorSpecified = true,
+                        }
+                        },
+                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                            Any = new [] {
+                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                            },
+                            SenestAendretTidspunkt = DateTime.Now,
+                            SenestAendretTidspunktSpecified = true
+                        },
+                    },
+                    TilstandListe = new TilstandListeType1() {
+                        Fremdrift = new[] { new FremdriftType1() {
+                            FremdriftStatusKode = FremdriftStatusKodeType1.Afgjort,
+                            FremdriftStatusKodeSpecified = true,
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+                            },
+                        }
+                        },
+                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                            Any = new [] {
+                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                            },
+                            SenestAendretTidspunkt = DateTime.Now,
+                            SenestAendretTidspunktSpecified = true
+                        },
+                    },
+                    RelationListe = new RelationListeType1() {
+                        Sagsaktoer = new[] { new RelationType() {
+                            Indeks = "ÆØÅ",
+                            Rolle = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Type = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            ReferenceID = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+                            },
+                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                Any = new [] {
+                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                },
+                                SenestAendretTidspunkt = DateTime.Now,
+                                SenestAendretTidspunktSpecified = true
+                            },
+                        }
+                        },
+                        Sagsklasse = new[] { new RelationType() {
+                            Indeks = "ÆØÅ",
+                            Rolle = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Type = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            ReferenceID = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+
+                            },
+                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                Any = new [] {
+                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                },
+                                SenestAendretTidspunkt = DateTime.Now,
+                                SenestAendretTidspunktSpecified = true
+                            },
+                        }
+                        },
+                        Sagspart = new[] { new RelationType() {
+                            Indeks = "ÆØÅ",
+                            Rolle = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Type = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            ReferenceID = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+
+                            },
+                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                Any = new [] {
+                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                },
+                                SenestAendretTidspunkt = DateTime.Now,
+                                SenestAendretTidspunktSpecified = true
+                            },
+                        }
+                        },
+                        Journalpost = new[] { new JournalpostRelationType() {
+                            Indeks = "ÆØÅ",
+                            Rolle = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Type = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            ReferenceID = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+
+                            },
+                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                Any = new [] {
+                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                },
+                                SenestAendretTidspunkt = DateTime.Now,
+                                SenestAendretTidspunktSpecified = true
+                            },
+                            JournalpostEgenskaber = new JournalpostEgenskaberType() {
+                                Dokumenttitel = "ÆØÅ",
+                                OffentlighedUndtaget = new OffentlighedUndtagetType() {
+                                    OffentlighedUndtagetHjemmelTekst = "ÆØÅ",
+                                    TitelAlternativTekst = "ÆØÅ"
+                                },
+                                JournalnotatEgenskaber = new JournalnotatEgenskaberType() {
+                                    Format = "ÆØÅ",
+                                    Notat = new byte[] {},
+                                    Titel = "ÆØÅ",
+                                },
+                            }
+                        }
+                        },
+                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                            Any = new [] {
+                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                            },
+                            SenestAendretTidspunkt = DateTime.Now,
+                            SenestAendretTidspunktSpecified = true
+                        },
+                        Sagsgenstande = new[] { new RelationType() {
+                            Indeks = "ÆØÅ",
+                            Rolle = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Type = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            ReferenceID = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+
+                            },
+                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                Any = new [] {
+                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                },
+                                SenestAendretTidspunkt = DateTime.Now,
+                                SenestAendretTidspunktSpecified = true
+                            },
+                        }
+                        },
+                        Sagsrelation = new[] { new RelationType() {
+                            Indeks = "ÆØÅ",
+                            Rolle = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Type = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            ReferenceID = new UnikIdType() {
+                                Item = "ÆØÅ",
+                                ItemElementName = ItemChoiceType.UUIDIdentifikator
+                            },
+                            Virkning = new VirkningType() {
+                                NoteTekst = "ÆØÅ",
+                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
+                                AktoerTypeKodeSpecified = true,
+                                AktoerRef = new UnikIdType() {
+                                    Item = "ÆØÅ",
+                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
+                                },
+                                FraTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now
+                                },
+                                TilTidspunkt = new TidspunktType() {
+                                    Item = DateTime.Now.AddDays(1)
+                                },
+
+                            },
+                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
+                                Any = new [] {
+                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                },
+                                SenestAendretTidspunkt = DateTime.Now,
+                                SenestAendretTidspunktSpecified = true
+                            },
+                        }
+                        },
+                    },
+                    UdenNotifikation = true,
+                    UdenNotifikationSpecified = true,
+                    NoteTekst = "ÆØÅ",
+                    Tidspunkt = DateTime.Now,
+                    UUIDIdentifikator = "ÆØÅ",
+                }
+                }
+            };
+
+            return Port.opdater(request);
+        }
+
+
         /// <summary>
         /// Creates a Virkning that starts now and never ends
         /// </summary>

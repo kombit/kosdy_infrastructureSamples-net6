@@ -11,6 +11,7 @@ namespace Kombit.InfrastructureSamples {
         public const string ConfigurationSectionNameForOrganisation = "oioIdwsOrganisationConfiguration";
         public const string ConfigurationSectionNameForVirksomhed = "oioIdwsVirksomhedConfiguration";
         public const string ConfigurationSectionNameForSagsDokumentIndeks = "oioIdwsSagsDokumentIndeksConfiguration";
+        public const string ConfigurationSectionNameForYdelseIndeks = "oioIdwsYdelseIndeksConfiguration";
 
         #endregion
 
