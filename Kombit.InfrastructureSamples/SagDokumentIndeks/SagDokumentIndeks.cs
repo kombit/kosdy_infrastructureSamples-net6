@@ -372,7 +372,7 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
                             TypeSpecified = true,
                             Kassationskode = ConfigVariables.,
                             BrugervendtNoegle = ConfigVariables.,
-                            Foelsomhed = FoelsomhedType.IKKE_FORTROLIGE_DATA,
+                            Foelsomhed = ConfigVariables.FoelsomhedType.IKKE_FORTROLIGE_DATA,
                             FoelsomhedSpecified = true,
                             BrevDato = DateTime.Now,
                             BrevDatoSpecified = true,
