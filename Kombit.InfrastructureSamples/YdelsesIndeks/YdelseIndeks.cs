@@ -24,7 +24,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
             {
                 ImporterYdelseIndeksInput = new object[] { new ImportInputType() {
                         BevillingIndeks = new BevillingIndeksType() {
-                            UdenNotifikation = Boolean.Parse("ÆØÅ"),
+                            UdenNotifikation = Boolean.Parse(ConfigVariables.),
                             UdenNotifikationSpecified = true,
                             UUIDIdentifikator = uuidIdentifikatorBevilling,
 
@@ -44,12 +44,12 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                                 },
                                                 AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                                 AktoerTypeKodeSpecified = true,
-                                                NoteTekst = "ÆØÅ"
+                                                NoteTekst = ConfigVariables.
                                             },
-                                            BrugervendtNoegle = "ÆØÅ",
-                                            Bevillingstartdato = "ÆØÅ",
-                                            Bevillingslutdato = "ÆØÅ",
-                                            Begrundelse = "ÆØÅ",
+                                            BrugervendtNoegle = ConfigVariables.,
+                                            Bevillingstartdato = ConfigVariables.,
+                                            Bevillingslutdato = ConfigVariables.,
+                                            Begrundelse = ConfigVariables.,
                                             Foelsomhed = FoelsomhedType.IKKE_FORTROLIGE_DATA,
                                             FoelsomhedSpecified = true
                                     }
@@ -68,20 +68,20 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                                 },
                                                 AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                                 AktoerTypeKodeSpecified = true,
-                                                NoteTekst = "ÆØÅ"
+                                                NoteTekst = ConfigVariables.
                                             },
-                                            Id = "ÆØÅ",
-                                            Navn = "ÆØÅ",
+                                            Id = ConfigVariables.,
+                                            Navn = ConfigVariables.,
                                             BevilgetYdelseStartdato = DateTime.Now,
                                             BevilgetYdelseStartdatoSpecified = true,
                                             BevilgetYdelseSlutdatoSpecified = false,
-                                            Begrundelse = "ÆØÅ",
-                                            Tilbagebetalingspligtig = Boolean.Parse("ÆØÅ"),
+                                            Begrundelse = ConfigVariables.,
+                                            Tilbagebetalingspligtig = Boolean.Parse(ConfigVariables.),
                                             TilbagebetalingspligtigSpecified = true,
-                                            Meddelelse = "ÆØÅ",
+                                            Meddelelse = ConfigVariables.,
                                             ItSystem = new [] { new ItSystemRelationType() {
                                                 SystemNavn = ConfigVariables.ANVENDER_SYSTEM_NAVN,
-                                                SystemURI = "ÆØÅ",
+                                                SystemURI = ConfigVariables.,
                                                 Rolle = new UnikIdType() {
                                                         Item = ConfigVariables.MASTER_UUID, // Constant for Master
                                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
@@ -90,14 +90,14 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                                     Item = ConfigVariables.IT_SYSTEM_TYPE_UUID, // Constant for IT-system
                                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                 },
-                                                Indeks = "ÆØÅ",
+                                                Indeks = ConfigVariables.,
                                                 ReferenceID = new UnikIdType() {
                                                     Item = ConfigVariables.ANVENDER_SYSTEM_UUID, // The UUID of your IT-system
                                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                 },
                                                 LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                                    Any = new [] {
-                                                       (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                       (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                                    },
                                                    SenestAendretTidspunkt = DateTime.Now,
                                                    SenestAendretTidspunktSpecified = true
@@ -105,61 +105,61 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             }
                                             },
                                             Ydelse = new YdelseRelationType() {
-                                                Ydelsesnavn = "ÆØÅ",
+                                                Ydelsesnavn = ConfigVariables.,
                                                 Klassifikation = new BevillingsklasseRelationType() {
-                                                    BrugervendtNoegle = "ÆØÅ",
-                                                    Klassetitel = "ÆØÅ",
+                                                    BrugervendtNoegle = ConfigVariables.,
+                                                    Klassetitel = ConfigVariables.,
                                                     Rolle = new UnikIdType() {
-                                                        Item = "ÆØÅ", // Constant for Master
+                                                        Item = ConfigVariables., // Constant for Master
                                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                     },
                                                     Type = new UnikIdType() {
-                                                        Item = "ÆØÅ", // Constant for IT-system
+                                                        Item = ConfigVariables., // Constant for IT-system
                                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                     },
-                                                    Indeks = "ÆØÅ",
+                                                    Indeks = ConfigVariables.,
                                                     ReferenceID = new UnikIdType() {
-                                                        Item = "ÆØÅ", // The UUID of your IT-system
+                                                        Item = ConfigVariables., // The UUID of your IT-system
                                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                     },
                                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                                        Any = new [] {
-                                                           (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                           (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                                        },
                                                        SenestAendretTidspunkt = DateTime.Now,
                                                        SenestAendretTidspunktSpecified = true
                                                     }
                                                 },
                                                  Rolle = new UnikIdType() {
-                                                        Item = "ÆØÅ", // Constant for Master
+                                                        Item = ConfigVariables., // Constant for Master
                                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                 },
                                                 Type = new UnikIdType() {
-                                                    Item = "ÆØÅ", // Constant for IT-system
+                                                    Item = ConfigVariables., // Constant for IT-system
                                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                 },
-                                                Indeks = "ÆØÅ",
+                                                Indeks = ConfigVariables.,
                                                 ReferenceID = new UnikIdType() {
-                                                    Item = "ÆØÅ", // The UUID of your IT-system
+                                                    Item = ConfigVariables., // The UUID of your IT-system
                                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                 },
                                                 LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                                    Any = new [] {
-                                                       (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                       (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                                    },
                                                    SenestAendretTidspunkt = DateTime.Now,
                                                    SenestAendretTidspunktSpecified = true
                                                 }
                                             },
                                             Items = new [] { new OekonomiskEffektueringsplanType() {
-                                                Id = "ÆØÅ",
+                                                Id = ConfigVariables.,
                                                 EffektueringsplanStartdato = DateTime.Now,
                                                 EffektueringsplanSlutdatoSpecified = false,
-                                                Beregningsfrekvens = "ÆØÅ",
+                                                Beregningsfrekvens = ConfigVariables.,
                                                 ForudBagud = OekonomiskEffektueringsplanTypeForudBagud.Forud,
-                                                Dispositionsdag = "ÆØÅ",
-                                                Ydelsesbeloeb = "ÆØÅ",
-                                                ManueltGodkendes = Boolean.Parse("ÆØÅ"),
+                                                Dispositionsdag = ConfigVariables.,
+                                                Ydelsesbeloeb = ConfigVariables.,
+                                                ManueltGodkendes = Boolean.Parse(ConfigVariables.),
                                                 ForudBagudSpecified = true,
                                                 ManueltGodkendesSpecified = true
                                             }
@@ -172,7 +172,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 TilstandListe = new TilstandListeType() {
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         },
                                         SenestAendretTidspunkt = DateTime.Now,
                                         SenestAendretTidspunktSpecified = true
@@ -181,8 +181,8 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 RelationListe = new RelationListeType() {
                                     Bevillingssag = new[] {
                                         new BevillingIndeksSagRelationType() {
-                                            BrugervendtNoegle = "ÆØÅ",
-                                            FuldtNavn = "ÆØÅ",
+                                            BrugervendtNoegle = ConfigVariables.,
+                                            FuldtNavn = ConfigVariables.,
                                             Virkning = new VirkningType {
                                                 FraTidspunkt = new TidspunktType() {
                                                     Item = DateTime.Now,
@@ -196,24 +196,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                                 },
                                                 AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                                 AktoerTypeKodeSpecified = true,
-                                                NoteTekst = "ÆØÅ"
+                                                NoteTekst = ConfigVariables.
                                             },
                                             Rolle = new UnikIdType() {
-                                                Item = "ÆØÅ", // Constant for Master
+                                                Item = ConfigVariables., // Constant for Master
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
                                             Type = new UnikIdType() {
-                                                Item = "ÆØÅ", // Constant for IT-system
+                                                Item = ConfigVariables., // Constant for IT-system
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
-                                            Indeks = "ÆØÅ",
+                                            Indeks = ConfigVariables.,
                                             ReferenceID = new UnikIdType() {
-                                                Item = "ÆØÅ", // The UUID of your IT-system
+                                                Item = ConfigVariables., // The UUID of your IT-system
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
                                             LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                                 Any = new [] {
-                                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                                 },
                                                 SenestAendretTidspunkt = DateTime.Now,
                                                 SenestAendretTidspunktSpecified = true
@@ -221,8 +221,8 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                         }
                                     },
                                     Bevillingspart = new[] { new BevillingIndeksPartRelationType() {
-                                        BrugervendtNoegle = "ÆØÅ",
-                                        FuldtNavn = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
+                                        FuldtNavn = ConfigVariables.,
                                         Virkning = new VirkningType {
                                             FraTidspunkt = new TidspunktType() {
                                                 Item = DateTime.Now,
@@ -236,24 +236,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for Master
+                                            Item = ConfigVariables., // Constant for Master
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for IT-system
+                                            Item = ConfigVariables., // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            Item = ConfigVariables., // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -261,9 +261,9 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     }
                                     },
                                     Bevillingsaktoer = new[] { new BevillingIndeksAktoerRelationType() {
-                                        BrugervendtNoegle = "ÆØÅ",
-                                        FuldtNavn = "ÆØÅ",
-                                        CVRnr = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
+                                        FuldtNavn = ConfigVariables.,
+                                        CVRnr = ConfigVariables.,
                                         Virkning = new VirkningType {
                                             FraTidspunkt = new TidspunktType() {
                                                 Item = DateTime.Now,
@@ -277,24 +277,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for Master
+                                            Item = ConfigVariables., // Constant for Master
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for IT-system
+                                            Item = ConfigVariables., // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            Item = ConfigVariables., // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -315,24 +315,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for Master
+                                            Item = ConfigVariables., // Constant for Master
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for IT-system
+                                            Item = ConfigVariables., // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            Item = ConfigVariables., // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -340,11 +340,11 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     }
                                     }
                                 },
-                                NoteTekst = "ÆØÅ",
+                                NoteTekst = ConfigVariables.,
                                 Tidspunkt = DateTime.Now,
                                 TidspunktSpecified = true,
                                 BrugerRef = new UnikIdType() {
-                                    Item = "ÆØÅ",
+                                    Item = ConfigVariables.,
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 LivscyklusKode = LivscyklusKodeType.Importeret,
@@ -378,26 +378,26 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
-                                        BrugervendtNoegle = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
                                         Startdato = DateTime.Now,
                                         StartdatoSpecified = true,
                                         SlutdatoSpecified = false,
-                                        SamletBruttobeloeb = "ÆØÅ",
+                                        SamletBruttobeloeb = ConfigVariables.,
                                         Dispositionsdato = DateTime.Now,
                                         DispositionsdatoSpecified = true,
-                                        BeloebEfterSkatATP = "ÆØÅ",
-                                        BeloebSendtTilUdbetaling = "ÆØÅ",
-                                        BeloebUdbetalt = "ÆØÅ",
-                                        Udbetalingsafdeling = "ÆØÅ",
-                                        SendtTilUdbetalingTekst = "ÆØÅ",
-                                        UdbetaltTekst = "ÆØÅ"
+                                        BeloebEfterSkatATP = ConfigVariables.,
+                                        BeloebSendtTilUdbetaling = ConfigVariables.,
+                                        BeloebUdbetalt = ConfigVariables.,
+                                        Udbetalingsafdeling = ConfigVariables.,
+                                        SendtTilUdbetalingTekst = ConfigVariables.,
+                                        UdbetaltTekst = ConfigVariables.
                                     }
                                     },
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         },
                                         SenestAendretTidspunkt = DateTime.Now,
                                         SenestAendretTidspunktSpecified = true
@@ -406,7 +406,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 TilstandListe = new TilstandListeType1() {
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         }
                                     }
                                 },
@@ -426,24 +426,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for Master
+                                            Item = ConfigVariables., // Constant for Master
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for IT-system
+                                            Item = ConfigVariables., // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            Item = ConfigVariables., // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -451,18 +451,18 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                         YdelsesperiodeStartdato = DateTime.Now,
                                         YdelsesperiodeStartdatoSpecified = true,
                                         YdelsesperiodeSlutdatoSpecified = false,
-                                        Ydelsesbeloeb = "ÆØÅ",
-                                        Klassifikationsbeskrivelse = "ÆØÅ",
+                                        Ydelsesbeloeb = ConfigVariables.,
+                                        Klassifikationsbeskrivelse = ConfigVariables.,
                                         BevilgetYdelseRef = new BevilgetYdelseRefType() {
-                                            UUIDIdentifikator = "ÆØÅ",
-                                            BevilgetYdelseId = "ÆØÅ"
+                                            UUIDIdentifikator = ConfigVariables.,
+                                            BevilgetYdelseId = ConfigVariables.
                                         }
                                         }
                                     },
                                     Aktoer = new[] { new OekonomiskEffektueringIndeksAktoerRelationType() {
-                                        BrugervendtNoegle = "ÆØÅ",
-                                        FuldtNavn = "ÆØÅ",
-                                        CVRnr = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
+                                        FuldtNavn = ConfigVariables.,
+                                        CVRnr = ConfigVariables.,
                                         Virkning = new VirkningType {
                                             FraTidspunkt = new TidspunktType() {
                                                 Item = DateTime.Now,
@@ -476,24 +476,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -502,7 +502,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     ItSystem = new[] { new ItSystemRelationType1() {
                                         SystemNavn = ConfigVariables.ANVENDER_SYSTEM_NAVN,
-                                        SystemURI = "ÆØÅ",
+                                        SystemURI = ConfigVariables.,
                                         Rolle = new UnikIdType() {
                                                 Item = ConfigVariables.MASTER_UUID, // Constant for Master
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
@@ -511,14 +511,14 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             Item = ConfigVariables.IT_SYSTEM_TYPE_UUID, // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
                                             Item = ConfigVariables.ANVENDER_SYSTEM_UUID, // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -526,8 +526,8 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     }
                                     },
                                     OekonomiskEffektueringPart = new[] { new OekonomiskEffektueringIndeksPartRelationType() {
-                                        BrugervendtNoegle = "ÆØÅ",
-                                        FuldtNavn = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
+                                        FuldtNavn = ConfigVariables.,
                                         Virkning = new VirkningType {
                                             FraTidspunkt = new TidspunktType() {
                                                 Item = DateTime.Now,
@@ -541,24 +541,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -567,17 +567,17 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         },
                                         SenestAendretTidspunkt = DateTime.Now,
                                         SenestAendretTidspunktSpecified = true
                                     }
                                 },
-                                NoteTekst = "ÆØÅ",
+                                NoteTekst = ConfigVariables.,
                                 Tidspunkt = DateTime.Now,
                                 TidspunktSpecified = true,
                                 BrugerRef = new UnikIdType() {
-                                    Item = "ÆØÅ",
+                                    Item = ConfigVariables.,
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 LivscyklusKode = LivscyklusKodeType.Importeret,
@@ -618,12 +618,12 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ"
+                                    NoteTekst = ConfigVariables.
                                 },
-                                BrugervendtNoegle = "ÆØÅ",
-                                Bevillingstartdato = "ÆØÅ",
-                                Bevillingslutdato = "ÆØÅ",
-                                Begrundelse = "ÆØÅ",
+                                BrugervendtNoegle = ConfigVariables.,
+                                Bevillingstartdato = ConfigVariables.,
+                                Bevillingslutdato = ConfigVariables.,
+                                Begrundelse = ConfigVariables.,
                                 Foelsomhed = FoelsomhedType.IKKE_FORTROLIGE_DATA,
                                 FoelsomhedSpecified = true
                             }
@@ -642,20 +642,20 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ"
+                                    NoteTekst = ConfigVariables.
                                 },
-                                Id = "ÆØÅ",
-                                Navn = "ÆØÅ",
+                                Id = ConfigVariables.,
+                                Navn = ConfigVariables.,
                                 BevilgetYdelseStartdato = DateTime.Now,
                                 BevilgetYdelseStartdatoSpecified = true,
                                 BevilgetYdelseSlutdatoSpecified = false,
-                                Begrundelse = "ÆØÅ",
-                                Tilbagebetalingspligtig = Boolean.Parse("ÆØÅ"),
+                                Begrundelse = ConfigVariables.,
+                                Tilbagebetalingspligtig = Boolean.Parse(ConfigVariables.),
                                 TilbagebetalingspligtigSpecified = true,
-                                Meddelelse = "ÆØÅ",
+                                Meddelelse = ConfigVariables.,
                                 ItSystem = new [] { new ItSystemRelationType() {
                                     SystemNavn = ConfigVariables.ANVENDER_SYSTEM_NAVN,
-                                    SystemURI = "ÆØÅ",
+                                    SystemURI = ConfigVariables.,
                                     Rolle = new UnikIdType() {
                                             Item = ConfigVariables.MASTER_UUID, // Constant for Master
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
@@ -664,14 +664,14 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                         Item = ConfigVariables.IT_SYSTEM_TYPE_UUID, // Constant for IT-system
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
-                                    Indeks = "ÆØÅ",
+                                    Indeks = ConfigVariables.,
                                     ReferenceID = new UnikIdType() {
                                         Item = ConfigVariables.ANVENDER_SYSTEM_UUID, // The UUID of your IT-system
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         },
                                         SenestAendretTidspunkt = DateTime.Now,
                                         SenestAendretTidspunktSpecified = true
@@ -679,61 +679,61 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 }
                                 },
                                 Ydelse = new YdelseRelationType() {
-                                    Ydelsesnavn = "ÆØÅ",
+                                    Ydelsesnavn = ConfigVariables.,
                                     Klassifikation = new BevillingsklasseRelationType() {
-                                        BrugervendtNoegle = "ÆØÅ",
-                                        Klassetitel = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
+                                        Klassetitel = ConfigVariables.,
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for Master
+                                            Item = ConfigVariables., // Constant for Master
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for IT-system
+                                            Item = ConfigVariables., // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            Item = ConfigVariables., // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
                                         }
                                     },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for Master
+                                            Item = ConfigVariables., // Constant for Master
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
                                     Type = new UnikIdType() {
-                                        Item = "ÆØÅ", // Constant for IT-system
+                                        Item = ConfigVariables., // Constant for IT-system
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
-                                    Indeks = "ÆØÅ",
+                                    Indeks = ConfigVariables.,
                                     ReferenceID = new UnikIdType() {
-                                        Item = "ÆØÅ", // The UUID of your IT-system
+                                        Item = ConfigVariables., // The UUID of your IT-system
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         },
                                         SenestAendretTidspunkt = DateTime.Now,
                                         SenestAendretTidspunktSpecified = true
                                     }
                                 },
                                 Items = new [] { new OekonomiskEffektueringsplanType() {
-                                    Id = "ÆØÅ",
+                                    Id = ConfigVariables.,
                                     EffektueringsplanStartdato = DateTime.Now,
                                     EffektueringsplanSlutdatoSpecified = false,
-                                    Beregningsfrekvens = "ÆØÅ",
+                                    Beregningsfrekvens = ConfigVariables.,
                                     ForudBagud = OekonomiskEffektueringsplanTypeForudBagud.Forud,
-                                    Dispositionsdag = "ÆØÅ",
-                                    Ydelsesbeloeb = "ÆØÅ",
-                                    ManueltGodkendes = Boolean.Parse("ÆØÅ"),
+                                    Dispositionsdag = ConfigVariables.,
+                                    Ydelsesbeloeb = ConfigVariables.,
+                                    ManueltGodkendes = Boolean.Parse(ConfigVariables.),
                                     ForudBagudSpecified = true,
                                     ManueltGodkendesSpecified = true
                                 }
@@ -744,7 +744,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                         TilstandListe = new TilstandListeType() {
                             LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                 Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                 },
                                 SenestAendretTidspunkt = DateTime.Now,
                                 SenestAendretTidspunktSpecified = true
@@ -753,8 +753,8 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                         RelationListe = new RelationListeType() {
                             Bevillingssag = new[] {
                                 new BevillingIndeksSagRelationType() {
-                                    BrugervendtNoegle = "ÆØÅ",
-                                    FuldtNavn = "ÆØÅ",
+                                    BrugervendtNoegle = ConfigVariables.,
+                                    FuldtNavn = ConfigVariables.,
                                     Virkning = new VirkningType {
                                         FraTidspunkt = new TidspunktType() {
                                             Item = DateTime.Now,
@@ -768,24 +768,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                         },
                                         AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                         AktoerTypeKodeSpecified = true,
-                                        NoteTekst = "ÆØÅ"
+                                        NoteTekst = ConfigVariables.
                                     },
                                     Rolle = new UnikIdType() {
-                                        Item = "ÆØÅ", // Constant for Master
+                                        Item = ConfigVariables., // Constant for Master
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
                                     Type = new UnikIdType() {
-                                        Item = "ÆØÅ", // Constant for IT-system
+                                        Item = ConfigVariables., // Constant for IT-system
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
-                                    Indeks = "ÆØÅ",
+                                    Indeks = ConfigVariables.,
                                     ReferenceID = new UnikIdType() {
-                                        Item = "ÆØÅ", // The UUID of your IT-system
+                                        Item = ConfigVariables., // The UUID of your IT-system
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         },
                                         SenestAendretTidspunkt = DateTime.Now,
                                         SenestAendretTidspunktSpecified = true
@@ -793,8 +793,8 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 }
                             },
                             Bevillingspart = new[] { new BevillingIndeksPartRelationType() {
-                                BrugervendtNoegle = "ÆØÅ",
-                                FuldtNavn = "ÆØÅ",
+                                BrugervendtNoegle = ConfigVariables.,
+                                FuldtNavn = ConfigVariables.,
                                 Virkning = new VirkningType {
                                     FraTidspunkt = new TidspunktType() {
                                         Item = DateTime.Now,
@@ -808,24 +808,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ"
+                                    NoteTekst = ConfigVariables.
                                 },
                                 Rolle = new UnikIdType() {
-                                    Item = "ÆØÅ", // Constant for Master
+                                    Item = ConfigVariables., // Constant for Master
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 Type = new UnikIdType() {
-                                    Item = "ÆØÅ", // Constant for IT-system
+                                    Item = ConfigVariables., // Constant for IT-system
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
-                                Indeks = "ÆØÅ",
+                                Indeks = ConfigVariables.,
                                 ReferenceID = new UnikIdType() {
-                                    Item = "ÆØÅ", // The UUID of your IT-system
+                                    Item = ConfigVariables., // The UUID of your IT-system
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                     Any = new [] {
-                                        (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                     },
                                     SenestAendretTidspunkt = DateTime.Now,
                                     SenestAendretTidspunktSpecified = true
@@ -833,9 +833,9 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                             }
                             },
                             Bevillingsaktoer = new[] { new BevillingIndeksAktoerRelationType() {
-                                BrugervendtNoegle = "ÆØÅ",
-                                FuldtNavn = "ÆØÅ",
-                                CVRnr = "ÆØÅ",
+                                BrugervendtNoegle = ConfigVariables.,
+                                FuldtNavn = ConfigVariables.,
+                                CVRnr = ConfigVariables.,
                                 Virkning = new VirkningType {
                                     FraTidspunkt = new TidspunktType() {
                                         Item = DateTime.Now,
@@ -849,24 +849,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ"
+                                    NoteTekst = ConfigVariables.
                                 },
                                 Rolle = new UnikIdType() {
-                                    Item = "ÆØÅ", // Constant for Master
+                                    Item = ConfigVariables., // Constant for Master
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 Type = new UnikIdType() {
-                                    Item = "ÆØÅ", // Constant for IT-system
+                                    Item = ConfigVariables., // Constant for IT-system
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
-                                Indeks = "ÆØÅ",
+                                Indeks = ConfigVariables.,
                                 ReferenceID = new UnikIdType() {
-                                    Item = "ÆØÅ", // The UUID of your IT-system
+                                    Item = ConfigVariables., // The UUID of your IT-system
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                     Any = new [] {
-                                        (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                     },
                                     SenestAendretTidspunkt = DateTime.Now,
                                     SenestAendretTidspunktSpecified = true
@@ -887,24 +887,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ"
+                                    NoteTekst = ConfigVariables.
                                 },
                                 Rolle = new UnikIdType() {
-                                    Item = "ÆØÅ", // Constant for Master
+                                    Item = ConfigVariables., // Constant for Master
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 Type = new UnikIdType() {
-                                    Item = "ÆØÅ", // Constant for IT-system
+                                    Item = ConfigVariables., // Constant for IT-system
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
-                                Indeks = "ÆØÅ",
+                                Indeks = ConfigVariables.,
                                 ReferenceID = new UnikIdType() {
-                                    Item = "ÆØÅ", // The UUID of your IT-system
+                                    Item = ConfigVariables., // The UUID of your IT-system
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                     Any = new [] {
-                                        (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                     },
                                     SenestAendretTidspunkt = DateTime.Now,
                                     SenestAendretTidspunktSpecified = true
@@ -912,9 +912,9 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                             }
                             }
                         },
-                        NoteTekst = "ÆØÅ",
+                        NoteTekst = ConfigVariables.,
                         Tidspunkt = DateTime.Now,
-                        UdenNotifikation = Boolean.Parse("ÆØÅ"),
+                        UdenNotifikation = Boolean.Parse(ConfigVariables.),
                         UdenNotifikationSpecified = true,
                         UUIDIdentifikator = uuidIdentifikatorBevilling
                     },
@@ -934,26 +934,26 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ"
+                                    NoteTekst = ConfigVariables.
                                 },
-                                BrugervendtNoegle = "ÆØÅ",
+                                BrugervendtNoegle = ConfigVariables.,
                                 Startdato = DateTime.Now,
                                 StartdatoSpecified = true,
                                 SlutdatoSpecified = false,
-                                SamletBruttobeloeb = "ÆØÅ",
+                                SamletBruttobeloeb = ConfigVariables.,
                                 Dispositionsdato = DateTime.Now,
                                 DispositionsdatoSpecified = true,
-                                BeloebEfterSkatATP = "ÆØÅ",
-                                BeloebSendtTilUdbetaling = "ÆØÅ",
-                                BeloebUdbetalt = "ÆØÅ",
-                                Udbetalingsafdeling = "ÆØÅ",
-                                SendtTilUdbetalingTekst = "ÆØÅ",
-                                UdbetaltTekst = "ÆØÅ"
+                                BeloebEfterSkatATP = ConfigVariables.,
+                                BeloebSendtTilUdbetaling = ConfigVariables.,
+                                BeloebUdbetalt = ConfigVariables.,
+                                Udbetalingsafdeling = ConfigVariables.,
+                                SendtTilUdbetalingTekst = ConfigVariables.,
+                                UdbetaltTekst = ConfigVariables.
                             }
                             },
                             LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                 Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                 },
                                 SenestAendretTidspunkt = DateTime.Now,
                                 SenestAendretTidspunktSpecified = true
@@ -962,7 +962,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                         TilstandListe = new TilstandListeType1() {
                             LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                 Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                 }
                             }
                         },
@@ -982,24 +982,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ"
+                                    NoteTekst = ConfigVariables.
                                 },
                                 Rolle = new UnikIdType() {
-                                    Item = "ÆØÅ", // Constant for Master
+                                    Item = ConfigVariables., // Constant for Master
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 Type = new UnikIdType() {
-                                    Item = "ÆØÅ", // Constant for IT-system
+                                    Item = ConfigVariables., // Constant for IT-system
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
-                                Indeks = "ÆØÅ",
+                                Indeks = ConfigVariables.,
                                 ReferenceID = new UnikIdType() {
-                                    Item = "ÆØÅ", // The UUID of your IT-system
+                                    Item = ConfigVariables., // The UUID of your IT-system
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                     Any = new [] {
-                                        (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                     },
                                     SenestAendretTidspunkt = DateTime.Now,
                                     SenestAendretTidspunktSpecified = true
@@ -1007,18 +1007,18 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 YdelsesperiodeStartdato = DateTime.Now,
                                 YdelsesperiodeStartdatoSpecified = true,
                                 YdelsesperiodeSlutdatoSpecified = false,
-                                Ydelsesbeloeb = "ÆØÅ",
-                                Klassifikationsbeskrivelse = "ÆØÅ",
+                                Ydelsesbeloeb = ConfigVariables.,
+                                Klassifikationsbeskrivelse = ConfigVariables.,
                                 BevilgetYdelseRef = new BevilgetYdelseRefType() {
-                                    UUIDIdentifikator = "ÆØÅ",
-                                    BevilgetYdelseId = "ÆØÅ"
+                                    UUIDIdentifikator = ConfigVariables.,
+                                    BevilgetYdelseId = ConfigVariables.
                                 }
                                 }
                             },
                             Aktoer = new[] { new OekonomiskEffektueringIndeksAktoerRelationType() {
-                                BrugervendtNoegle = "ÆØÅ",
-                                FuldtNavn = "ÆØÅ",
-                                CVRnr = "ÆØÅ",
+                                BrugervendtNoegle = ConfigVariables.,
+                                FuldtNavn = ConfigVariables.,
+                                CVRnr = ConfigVariables.,
                                 Virkning = new VirkningType {
                                     FraTidspunkt = new TidspunktType() {
                                         Item = DateTime.Now,
@@ -1032,24 +1032,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ"
+                                    NoteTekst = ConfigVariables.
                                 },
                                 Rolle = new UnikIdType() {
-                                    Item = "ÆØÅ",
+                                    Item = ConfigVariables.,
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 Type = new UnikIdType() {
-                                    Item = "ÆØÅ",
+                                    Item = ConfigVariables.,
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
-                                Indeks = "ÆØÅ",
+                                Indeks = ConfigVariables.,
                                 ReferenceID = new UnikIdType() {
-                                    Item = "ÆØÅ",
+                                    Item = ConfigVariables.,
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                     Any = new [] {
-                                        (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                     },
                                     SenestAendretTidspunkt = DateTime.Now,
                                     SenestAendretTidspunktSpecified = true
@@ -1058,7 +1058,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                             },
                             ItSystem = new[] { new ItSystemRelationType1() {
                                 SystemNavn = ConfigVariables.ANVENDER_SYSTEM_NAVN,
-                                SystemURI = "ÆØÅ",
+                                SystemURI = ConfigVariables.,
                                 Rolle = new UnikIdType() {
                                         Item = ConfigVariables.MASTER_UUID, // Constant for Master
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
@@ -1067,14 +1067,14 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     Item = ConfigVariables.IT_SYSTEM_TYPE_UUID, // Constant for IT-system
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
-                                Indeks = "ÆØÅ",
+                                Indeks = ConfigVariables.,
                                 ReferenceID = new UnikIdType() {
                                     Item = ConfigVariables.ANVENDER_SYSTEM_UUID, // The UUID of your IT-system
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                     Any = new [] {
-                                        (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                     },
                                     SenestAendretTidspunkt = DateTime.Now,
                                     SenestAendretTidspunktSpecified = true
@@ -1082,8 +1082,8 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                             }
                             },
                             OekonomiskEffektueringPart = new[] { new OekonomiskEffektueringIndeksPartRelationType() {
-                                BrugervendtNoegle = "ÆØÅ",
-                                FuldtNavn = "ÆØÅ",
+                                BrugervendtNoegle = ConfigVariables.,
+                                FuldtNavn = ConfigVariables.,
                                 Virkning = new VirkningType {
                                     FraTidspunkt = new TidspunktType() {
                                         Item = DateTime.Now,
@@ -1097,24 +1097,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ"
+                                    NoteTekst = ConfigVariables.
                                 },
                                 Rolle = new UnikIdType() {
-                                    Item = "ÆØÅ",
+                                    Item = ConfigVariables.,
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 Type = new UnikIdType() {
-                                    Item = "ÆØÅ",
+                                    Item = ConfigVariables.,
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
-                                Indeks = "ÆØÅ",
+                                Indeks = ConfigVariables.,
                                 ReferenceID = new UnikIdType() {
-                                    Item = "ÆØÅ",
+                                    Item = ConfigVariables.,
                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                 },
                                 LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                     Any = new [] {
-                                        (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                     },
                                     SenestAendretTidspunkt = DateTime.Now,
                                     SenestAendretTidspunktSpecified = true
@@ -1123,15 +1123,15 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                             },
                             LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                 Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                 },
                                 SenestAendretTidspunkt = DateTime.Now,
                                 SenestAendretTidspunktSpecified = true
                             }
                         },
-                        NoteTekst = "ÆØÅ",
+                        NoteTekst = ConfigVariables.,
                         Tidspunkt = DateTime.Now,
-                        UUIDIdentifikator = "ÆØÅ"
+                        UUIDIdentifikator = ConfigVariables.
                     }
                 },
                 RequestHeader = RequestHeader
@@ -1152,10 +1152,10 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                     {
                         Items = new Object[] {
                             new SoegInputType() {
-                                FoersteResultatReference = "ÆØÅ",
+                                FoersteResultatReference = ConfigVariables.,
                                 SoegRegistrering = new SoegRegistreringType() {
                                     BrugerRef = new UnikIdType() {
-                                        Item = "ÆØÅ",
+                                        Item = ConfigVariables.,
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
                                     LivscyklusKode = LivscyklusKodeType.Importeret,
@@ -1167,7 +1167,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                         Item = true
                                     },
                                 },
-                                MaksimalAntalKvantitet = "ÆØÅ",
+                                MaksimalAntalKvantitet = ConfigVariables.,
                                 SoegVirkning = new SoegVirkningType() {
                                     FraTidspunkt = new TidspunktType() {
                                         Item = DateTime.Now,
@@ -1181,11 +1181,11 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ",
+                                    NoteTekst = ConfigVariables.,
                                 }
                             },
                             new SoegInputType1() {
-                                FoersteResultatReference = "ÆØÅ",
+                                FoersteResultatReference = ConfigVariables.,
                                 AttributListe = new AttributListeType()
                                 {
                                     Egenskaber = new[] { new EgenskaberType() {
@@ -1202,12 +1202,12 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
-                                        BrugervendtNoegle = "ÆØÅ",
-                                        Bevillingstartdato = "ÆØÅ",
-                                        Bevillingslutdato = "ÆØÅ",
-                                        Begrundelse = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
+                                        Bevillingstartdato = ConfigVariables.,
+                                        Bevillingslutdato = ConfigVariables.,
+                                        Begrundelse = ConfigVariables.,
                                         Foelsomhed = FoelsomhedType.IKKE_FORTROLIGE_DATA,
                                         FoelsomhedSpecified = true
                                     }
@@ -1226,20 +1226,20 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
-                                        Id = "ÆØÅ",
-                                        Navn = "ÆØÅ",
+                                        Id = ConfigVariables.,
+                                        Navn = ConfigVariables.,
                                         BevilgetYdelseStartdato = DateTime.Now,
                                         BevilgetYdelseStartdatoSpecified = true,
                                         BevilgetYdelseSlutdatoSpecified = false,
-                                        Begrundelse = "ÆØÅ",
-                                        Tilbagebetalingspligtig = Boolean.Parse("ÆØÅ"),
+                                        Begrundelse = ConfigVariables.,
+                                        Tilbagebetalingspligtig = Boolean.Parse(ConfigVariables.),
                                         TilbagebetalingspligtigSpecified = true,
-                                        Meddelelse = "ÆØÅ",
+                                        Meddelelse = ConfigVariables.,
                                         ItSystem = new [] { new ItSystemRelationType() {
                                             SystemNavn = ConfigVariables.ANVENDER_SYSTEM_NAVN,
-                                            SystemURI = "ÆØÅ",
+                                            SystemURI = ConfigVariables.,
                                             Rolle = new UnikIdType() {
                                                     Item = ConfigVariables.MASTER_UUID, // Constant for Master
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
@@ -1248,14 +1248,14 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                                 Item = ConfigVariables.IT_SYSTEM_TYPE_UUID, // Constant for IT-system
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
-                                            Indeks = "ÆØÅ",
+                                            Indeks = ConfigVariables.,
                                             ReferenceID = new UnikIdType() {
                                                 Item = ConfigVariables.ANVENDER_SYSTEM_UUID, // The UUID of your IT-system
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
                                             LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                                 Any = new [] {
-                                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                                 },
                                                 SenestAendretTidspunkt = DateTime.Now,
                                                 SenestAendretTidspunktSpecified = true
@@ -1263,61 +1263,61 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                         }
                                         },
                                         Ydelse = new YdelseRelationType() {
-                                            Ydelsesnavn = "ÆØÅ",
+                                            Ydelsesnavn = ConfigVariables.,
                                             Klassifikation = new BevillingsklasseRelationType() {
-                                                BrugervendtNoegle = "ÆØÅ",
-                                                Klassetitel = "ÆØÅ",
+                                                BrugervendtNoegle = ConfigVariables.,
+                                                Klassetitel = ConfigVariables.,
                                                 Rolle = new UnikIdType() {
-                                                    Item = "ÆØÅ", // Constant for Master
+                                                    Item = ConfigVariables., // Constant for Master
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                 },
                                                 Type = new UnikIdType() {
-                                                    Item = "ÆØÅ", // Constant for IT-system
+                                                    Item = ConfigVariables., // Constant for IT-system
                                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                 },
-                                                Indeks = "ÆØÅ",
+                                                Indeks = ConfigVariables.,
                                                 ReferenceID = new UnikIdType() {
-                                                    Item = "ÆØÅ", // The UUID of your IT-system
+                                                    Item = ConfigVariables., // The UUID of your IT-system
                                                     ItemElementName = ItemChoiceType.UUIDIdentifikator
                                                 },
                                                 LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                                     Any = new [] {
-                                                        (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                                     },
                                                     SenestAendretTidspunkt = DateTime.Now,
                                                     SenestAendretTidspunktSpecified = true
                                                 }
                                             },
                                                 Rolle = new UnikIdType() {
-                                                    Item = "ÆØÅ", // Constant for Master
+                                                    Item = ConfigVariables., // Constant for Master
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
                                             Type = new UnikIdType() {
-                                                Item = "ÆØÅ", // Constant for IT-system
+                                                Item = ConfigVariables., // Constant for IT-system
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
-                                            Indeks = "ÆØÅ",
+                                            Indeks = ConfigVariables.,
                                             ReferenceID = new UnikIdType() {
-                                                Item = "ÆØÅ", // The UUID of your IT-system
+                                                Item = ConfigVariables., // The UUID of your IT-system
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
                                             LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                                 Any = new [] {
-                                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                                 },
                                                 SenestAendretTidspunkt = DateTime.Now,
                                                 SenestAendretTidspunktSpecified = true
                                             }
                                         },
                                         Items = new [] { new OekonomiskEffektueringsplanType() {
-                                            Id = "ÆØÅ",
+                                            Id = ConfigVariables.,
                                             EffektueringsplanStartdato = DateTime.Now,
                                             EffektueringsplanSlutdatoSpecified = false,
-                                            Beregningsfrekvens = "ÆØÅ",
+                                            Beregningsfrekvens = ConfigVariables.,
                                             ForudBagud = OekonomiskEffektueringsplanTypeForudBagud.Forud,
-                                            Dispositionsdag = "ÆØÅ",
-                                            Ydelsesbeloeb = "ÆØÅ",
-                                            ManueltGodkendes = Boolean.Parse("ÆØÅ"),
+                                            Dispositionsdag = ConfigVariables.,
+                                            Ydelsesbeloeb = ConfigVariables.,
+                                            ManueltGodkendes = Boolean.Parse(ConfigVariables.),
                                             ForudBagudSpecified = true,
                                             ManueltGodkendesSpecified = true
                                         }
@@ -1328,7 +1328,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 TilstandListe = new TilstandListeType() {
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         },
                                         SenestAendretTidspunkt = DateTime.Now,
                                         SenestAendretTidspunktSpecified = true
@@ -1337,8 +1337,8 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 RelationListe = new RelationListeType() {
                                     Bevillingssag = new[] {
                                         new BevillingIndeksSagRelationType() {
-                                            BrugervendtNoegle = "ÆØÅ",
-                                            FuldtNavn = "ÆØÅ",
+                                            BrugervendtNoegle = ConfigVariables.,
+                                            FuldtNavn = ConfigVariables.,
                                             Virkning = new VirkningType {
                                                 FraTidspunkt = new TidspunktType() {
                                                     Item = DateTime.Now,
@@ -1352,24 +1352,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                                 },
                                                 AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                                 AktoerTypeKodeSpecified = true,
-                                                NoteTekst = "ÆØÅ"
+                                                NoteTekst = ConfigVariables.
                                             },
                                             Rolle = new UnikIdType() {
-                                                Item = "ÆØÅ", // Constant for Master
+                                                Item = ConfigVariables., // Constant for Master
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
                                             Type = new UnikIdType() {
-                                                Item = "ÆØÅ", // Constant for IT-system
+                                                Item = ConfigVariables., // Constant for IT-system
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
-                                            Indeks = "ÆØÅ",
+                                            Indeks = ConfigVariables.,
                                             ReferenceID = new UnikIdType() {
-                                                Item = "ÆØÅ", // The UUID of your IT-system
+                                                Item = ConfigVariables., // The UUID of your IT-system
                                                 ItemElementName = ItemChoiceType.UUIDIdentifikator
                                             },
                                             LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                                 Any = new [] {
-                                                    (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                                 },
                                                 SenestAendretTidspunkt = DateTime.Now,
                                                 SenestAendretTidspunktSpecified = true
@@ -1377,8 +1377,8 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                         }
                                     },
                                     Bevillingspart = new[] { new BevillingIndeksPartRelationType() {
-                                        BrugervendtNoegle = "ÆØÅ",
-                                        FuldtNavn = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
+                                        FuldtNavn = ConfigVariables.,
                                         Virkning = new VirkningType {
                                             FraTidspunkt = new TidspunktType() {
                                                 Item = DateTime.Now,
@@ -1392,24 +1392,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for Master
+                                            Item = ConfigVariables., // Constant for Master
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for IT-system
+                                            Item = ConfigVariables., // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            Item = ConfigVariables., // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -1417,9 +1417,9 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     }
                                     },
                                     Bevillingsaktoer = new[] { new BevillingIndeksAktoerRelationType() {
-                                        BrugervendtNoegle = "ÆØÅ",
-                                        FuldtNavn = "ÆØÅ",
-                                        CVRnr = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
+                                        FuldtNavn = ConfigVariables.,
+                                        CVRnr = ConfigVariables.,
                                         Virkning = new VirkningType {
                                             FraTidspunkt = new TidspunktType() {
                                                 Item = DateTime.Now,
@@ -1433,24 +1433,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for Master
+                                            Item = ConfigVariables., // Constant for Master
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for IT-system
+                                            Item = ConfigVariables., // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            Item = ConfigVariables., // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -1471,24 +1471,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for Master
+                                            Item = ConfigVariables., // Constant for Master
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for IT-system
+                                            Item = ConfigVariables., // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            Item = ConfigVariables., // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -1498,7 +1498,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 },
                                 SoegRegistrering = new SoegRegistreringType() {
                                     BrugerRef = new UnikIdType() {
-                                        Item = "ÆØÅ",
+                                        Item = ConfigVariables.,
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
                                     LivscyklusKode = LivscyklusKodeType.Importeret,
@@ -1510,7 +1510,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                         Item = true
                                     },
                                 },
-                                MaksimalAntalKvantitet = "ÆØÅ",
+                                MaksimalAntalKvantitet = ConfigVariables.,
                                 SoegVirkning = new SoegVirkningType() {
                                     FraTidspunkt = new TidspunktType() {
                                         Item = DateTime.Now,
@@ -1524,7 +1524,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ",
+                                    NoteTekst = ConfigVariables.,
                                 },
                                 SoegStsFraTidspunkt = new TidspunktType() {
                                         Item = DateTime.Now,
@@ -1534,7 +1534,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 }
                             },
                             new SoegInputType2() {
-                                FoersteResultatReference = "ÆØÅ",
+                                FoersteResultatReference = ConfigVariables.,
                                 AttributListe = new AttributListeType1() {
                                     Egenskaber = new[] { new EgenskaberType1()  {
                                         Virkning = new VirkningType {
@@ -1550,26 +1550,26 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
-                                        BrugervendtNoegle = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
                                         Startdato = DateTime.Now,
                                         StartdatoSpecified = true,
                                         SlutdatoSpecified = false,
-                                        SamletBruttobeloeb = "ÆØÅ",
+                                        SamletBruttobeloeb = ConfigVariables.,
                                         Dispositionsdato = DateTime.Now,
                                         DispositionsdatoSpecified = true,
-                                        BeloebEfterSkatATP = "ÆØÅ",
-                                        BeloebSendtTilUdbetaling = "ÆØÅ",
-                                        BeloebUdbetalt = "ÆØÅ",
-                                        Udbetalingsafdeling = "ÆØÅ",
-                                        SendtTilUdbetalingTekst = "ÆØÅ",
-                                        UdbetaltTekst = "ÆØÅ"
+                                        BeloebEfterSkatATP = ConfigVariables.,
+                                        BeloebSendtTilUdbetaling = ConfigVariables.,
+                                        BeloebUdbetalt = ConfigVariables.,
+                                        Udbetalingsafdeling = ConfigVariables.,
+                                        SendtTilUdbetalingTekst = ConfigVariables.,
+                                        UdbetaltTekst = ConfigVariables.
                                     }
                                     },
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         },
                                         SenestAendretTidspunkt = DateTime.Now,
                                         SenestAendretTidspunktSpecified = true
@@ -1578,7 +1578,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 TilstandListe = new TilstandListeType1() {
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         }
                                     }
                                 },
@@ -1598,24 +1598,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for Master
+                                            Item = ConfigVariables., // Constant for Master
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ", // Constant for IT-system
+                                            Item = ConfigVariables., // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ", // The UUID of your IT-system
+                                            Item = ConfigVariables., // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -1623,18 +1623,18 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                         YdelsesperiodeStartdato = DateTime.Now,
                                         YdelsesperiodeStartdatoSpecified = true,
                                         YdelsesperiodeSlutdatoSpecified = false,
-                                        Ydelsesbeloeb = "ÆØÅ",
-                                        Klassifikationsbeskrivelse = "ÆØÅ",
+                                        Ydelsesbeloeb = ConfigVariables.,
+                                        Klassifikationsbeskrivelse = ConfigVariables.,
                                         BevilgetYdelseRef = new BevilgetYdelseRefType() {
-                                            UUIDIdentifikator = "ÆØÅ",
-                                            BevilgetYdelseId = "ÆØÅ"
+                                            UUIDIdentifikator = ConfigVariables.,
+                                            BevilgetYdelseId = ConfigVariables.
                                         }
                                         }
                                     },
                                     Aktoer = new[] { new OekonomiskEffektueringIndeksAktoerRelationType() {
-                                        BrugervendtNoegle = "ÆØÅ",
-                                        FuldtNavn = "ÆØÅ",
-                                        CVRnr = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
+                                        FuldtNavn = ConfigVariables.,
+                                        CVRnr = ConfigVariables.,
                                         Virkning = new VirkningType {
                                             FraTidspunkt = new TidspunktType() {
                                                 Item = DateTime.Now,
@@ -1648,24 +1648,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -1674,7 +1674,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     ItSystem = new[] { new ItSystemRelationType1() {
                                         SystemNavn = ConfigVariables.ANVENDER_SYSTEM_NAVN,
-                                        SystemURI = "ÆØÅ",
+                                        SystemURI = ConfigVariables.,
                                         Rolle = new UnikIdType() {
                                                 Item = ConfigVariables.MASTER_UUID, // Constant for Master
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
@@ -1683,14 +1683,14 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             Item = ConfigVariables.IT_SYSTEM_TYPE_UUID, // Constant for IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
                                             Item = ConfigVariables.ANVENDER_SYSTEM_UUID, // The UUID of your IT-system
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -1698,8 +1698,8 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     }
                                     },
                                     OekonomiskEffektueringPart = new[] { new OekonomiskEffektueringIndeksPartRelationType() {
-                                        BrugervendtNoegle = "ÆØÅ",
-                                        FuldtNavn = "ÆØÅ",
+                                        BrugervendtNoegle = ConfigVariables.,
+                                        FuldtNavn = ConfigVariables.,
                                         Virkning = new VirkningType {
                                             FraTidspunkt = new TidspunktType() {
                                                 Item = DateTime.Now,
@@ -1713,24 +1713,24 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                             },
                                             AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                             AktoerTypeKodeSpecified = true,
-                                            NoteTekst = "ÆØÅ"
+                                            NoteTekst = ConfigVariables.
                                         },
                                         Rolle = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         Type = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
-                                        Indeks = "ÆØÅ",
+                                        Indeks = ConfigVariables.,
                                         ReferenceID = new UnikIdType() {
-                                            Item = "ÆØÅ",
+                                            Item = ConfigVariables.,
                                             ItemElementName = ItemChoiceType.UUIDIdentifikator
                                         },
                                         LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                             Any = new [] {
-                                                (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                             },
                                             SenestAendretTidspunkt = DateTime.Now,
                                             SenestAendretTidspunktSpecified = true
@@ -1739,7 +1739,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     LokalUdvidelseListe = new LokalUdvidelseListeType() {
                                         Any = new [] {
-                                            (new System.Xml.XmlDocument()).CreateElement("ÆØÅ")
+                                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
                                         },
                                         SenestAendretTidspunkt = DateTime.Now,
                                         SenestAendretTidspunktSpecified = true
@@ -1748,7 +1748,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                 MaksimalAntalKvantitet = "999",
                                 SoegRegistrering = new SoegRegistreringType() {
                                     BrugerRef = new UnikIdType() {
-                                        Item = "ÆØÅ",
+                                        Item = ConfigVariables.,
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
                                     LivscyklusKode = LivscyklusKodeType.Importeret,
@@ -1773,7 +1773,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ",
+                                    NoteTekst = ConfigVariables.,
                                 },
                                 SoegStsFraTidspunkt = new TidspunktType() {
                                     Item = DateTime.Now,
@@ -1784,10 +1784,10 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
 
                             },
                             new SoegInputType() {
-                                FoersteResultatReference = "ÆØÅ",
+                                FoersteResultatReference = ConfigVariables.,
                                 SoegRegistrering = new SoegRegistreringType() {
                                     BrugerRef = new UnikIdType() {
-                                        Item = "ÆØÅ",
+                                        Item = ConfigVariables.,
                                         ItemElementName = ItemChoiceType.UUIDIdentifikator
                                     },
                                     LivscyklusKode = LivscyklusKodeType.Importeret,
@@ -1799,7 +1799,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                         Item = true
                                     },
                                 },
-                                MaksimalAntalKvantitet = "ÆØÅ",
+                                MaksimalAntalKvantitet = ConfigVariables.,
                                 SoegVirkning = new SoegVirkningType() {
                                     FraTidspunkt = new TidspunktType() {
                                         Item = DateTime.Now,
@@ -1813,7 +1813,7 @@ namespace Kombit.InfrastructureSamples.YdelsesIndeks
                                     },
                                     AktoerTypeKode = AktoerTypeKodeType.Bruger,
                                     AktoerTypeKodeSpecified = true,
-                                    NoteTekst = "ÆØÅ",
+                                    NoteTekst = ConfigVariables.,
                                 }
                             },
                         },
