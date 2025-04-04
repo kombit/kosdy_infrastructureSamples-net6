@@ -359,590 +359,590 @@ namespace Kombit.InfrastructureSamples.SagDokumentIndeks
             return response; 
         }
 
-        public opdaterResponse Opdater(string sagUuid)
-        {
-            opdaterRequest request = new opdaterRequest()
-            {
-                RequestHeader = RequestHeader,
-                OpdaterSagDokumentIndeksInput = new RetInputType[] { new OpdaterDokumentIndeksInputType() {
-                    AttributListe = new AttributListeType {
-                        Egenskaber = new[] { new EgenskaberType() {
-                            Beskrivelse = ConfigVariables.,
-                            Type = SagDokumentIndeksService.Type.Andet,
-                            TypeSpecified = true,
-                            Kassationskode = ConfigVariables.,
-                            BrugervendtNoegle = ConfigVariables.,
-                            Foelsomhed = ConfigVariables.FoelsomhedType.IKKE_FORTROLIGE_DATA,
-                            FoelsomhedSpecified = true,
-                            BrevDato = DateTime.Now,
-                            BrevDatoSpecified = true,
-                            Dokumentnummer = ConfigVariables.,
-                            OffentlighedUndtaget = new OffentlighedUndtagetType() {
-                                OffentlighedUndtagetHjemmelTekst = ConfigVariables.,
-                                TitelAlternativTekst = ConfigVariables.
-                            },
-                            Titel = ConfigVariables.,
-                            UnderversionIdentifikator = ConfigVariables.,
-                            VersionIdentifikator = ConfigVariables.,
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                }
-                            },
-                        }
-                        },
-                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                            Any = new [] {
-                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                            },
-                            SenestAendretTidspunkt = DateTime.Now,
-                            SenestAendretTidspunktSpecified = true
-                        },
-                    },
-                    TilstandListe = new TilstandListeType() {
-                        Fremdrift = new[] { new FremdriftType() {
-                            FremdriftStatusKode = FremdriftStatusKodeType.Afleveret,
-                            FremdriftStatusKodeSpecified = true,
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                }
-                            },
-                        }
-                        },
-                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                            Any = new [] {
-                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                            },
-                            SenestAendretTidspunkt = DateTime.Now,
-                            SenestAendretTidspunktSpecified = true
-                        },
-                    },
-                    RelationListe = new RelationListeType() {
-                        Dokumentaktoer = new[] { new RelationType() {
-                            Indeks = ConfigVariables.,
-                            Rolle = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Type = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            ReferenceID = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
+        //public opdaterResponse Opdater(string sagUuid)
+        //{
+        //    opdaterRequest request = new opdaterRequest()
+        //    {
+        //        RequestHeader = RequestHeader,
+        //        OpdaterSagDokumentIndeksInput = new RetInputType[] { new OpdaterDokumentIndeksInputType() {
+        //            AttributListe = new AttributListeType {
+        //                Egenskaber = new[] { new EgenskaberType() {
+        //                    Beskrivelse = ConfigVariables.,
+        //                    Type = SagDokumentIndeksService.Type.Andet,
+        //                    TypeSpecified = true,
+        //                    Kassationskode = ConfigVariables.,
+        //                    BrugervendtNoegle = ConfigVariables.,
+        //                    Foelsomhed = ConfigVariables.FoelsomhedType.IKKE_FORTROLIGE_DATA,
+        //                    FoelsomhedSpecified = true,
+        //                    BrevDato = DateTime.Now,
+        //                    BrevDatoSpecified = true,
+        //                    Dokumentnummer = ConfigVariables.,
+        //                    OffentlighedUndtaget = new OffentlighedUndtagetType() {
+        //                        OffentlighedUndtagetHjemmelTekst = ConfigVariables.,
+        //                        TitelAlternativTekst = ConfigVariables.
+        //                    },
+        //                    Titel = ConfigVariables.,
+        //                    UnderversionIdentifikator = ConfigVariables.,
+        //                    VersionIdentifikator = ConfigVariables.,
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        }
+        //                    },
+        //                }
+        //                },
+        //                LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                    Any = new [] {
+        //                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                    },
+        //                    SenestAendretTidspunkt = DateTime.Now,
+        //                    SenestAendretTidspunktSpecified = true
+        //                },
+        //            },
+        //            TilstandListe = new TilstandListeType() {
+        //                Fremdrift = new[] { new FremdriftType() {
+        //                    FremdriftStatusKode = FremdriftStatusKodeType.Afleveret,
+        //                    FremdriftStatusKodeSpecified = true,
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        }
+        //                    },
+        //                }
+        //                },
+        //                LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                    Any = new [] {
+        //                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                    },
+        //                    SenestAendretTidspunkt = DateTime.Now,
+        //                    SenestAendretTidspunktSpecified = true
+        //                },
+        //            },
+        //            RelationListe = new RelationListeType() {
+        //                Dokumentaktoer = new[] { new RelationType() {
+        //                    Indeks = ConfigVariables.,
+        //                    Rolle = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Type = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    ReferenceID = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
 
-                            },
-                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                                Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                                },
-                                SenestAendretTidspunkt = DateTime.Now,
-                                SenestAendretTidspunktSpecified = true
-                            },
-                        }
-                        },
-                        Dokumentklasse = new[] { new RelationType() {
-                            Indeks = ConfigVariables.,
-                            Rolle = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Type = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            ReferenceID = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
+        //                    },
+        //                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                        Any = new [] {
+        //                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                        },
+        //                        SenestAendretTidspunkt = DateTime.Now,
+        //                        SenestAendretTidspunktSpecified = true
+        //                    },
+        //                }
+        //                },
+        //                Dokumentklasse = new[] { new RelationType() {
+        //                    Indeks = ConfigVariables.,
+        //                    Rolle = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Type = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    ReferenceID = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
 
-                            },
-                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                                Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                                },
-                                SenestAendretTidspunkt = DateTime.Now,
-                                SenestAendretTidspunktSpecified = true
-                            },
-                        }
-                        },
-                        Dokumentpart = new[] { new RelationType() {
-                            Indeks = ConfigVariables.,
-                            Rolle = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Type = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            ReferenceID = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
+        //                    },
+        //                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                        Any = new [] {
+        //                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                        },
+        //                        SenestAendretTidspunkt = DateTime.Now,
+        //                        SenestAendretTidspunktSpecified = true
+        //                    },
+        //                }
+        //                },
+        //                Dokumentpart = new[] { new RelationType() {
+        //                    Indeks = ConfigVariables.,
+        //                    Rolle = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Type = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    ReferenceID = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
 
-                            },
-                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                                Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                                },
-                                SenestAendretTidspunkt = DateTime.Now,
-                                SenestAendretTidspunktSpecified = true
-                            },
-                        }
-                        },
-                        Dokumentrelation = new[] { new RelationType() {
-                            Indeks = ConfigVariables.,
-                            Rolle = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Type = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            ReferenceID = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
+        //                    },
+        //                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                        Any = new [] {
+        //                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                        },
+        //                        SenestAendretTidspunkt = DateTime.Now,
+        //                        SenestAendretTidspunktSpecified = true
+        //                    },
+        //                }
+        //                },
+        //                Dokumentrelation = new[] { new RelationType() {
+        //                    Indeks = ConfigVariables.,
+        //                    Rolle = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Type = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    ReferenceID = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
 
-                            },
-                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                                Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                                },
-                                SenestAendretTidspunkt = DateTime.Now,
-                                SenestAendretTidspunktSpecified = true
-                            },
-                        }
-                        },
-                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                            Any = new [] {
-                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                            },
-                            SenestAendretTidspunkt = DateTime.Now,
-                            SenestAendretTidspunktSpecified = true
-                        },
-                    },
-                    NoteTekst = ConfigVariables.,
-                    UUIDIdentifikator = ConfigVariables.,
-                    Tidspunkt = DateTime.Now,
-                }, new OpdaterSagIndeksInputType() {
-                    AttributListe = new AttributListeType1() {
-                        Egenskaber = new[] { new EgenskaberType1() {
-                            BrugervendtNoegle = ConfigVariables.,
-                            Beskrivelse = ConfigVariables.,
-                            Kassationskode = ConfigVariables.,
-                            Titel = ConfigVariables.,
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
+        //                    },
+        //                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                        Any = new [] {
+        //                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                        },
+        //                        SenestAendretTidspunkt = DateTime.Now,
+        //                        SenestAendretTidspunktSpecified = true
+        //                    },
+        //                }
+        //                },
+        //                LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                    Any = new [] {
+        //                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                    },
+        //                    SenestAendretTidspunkt = DateTime.Now,
+        //                    SenestAendretTidspunktSpecified = true
+        //                },
+        //            },
+        //            NoteTekst = ConfigVariables.,
+        //            UUIDIdentifikator = ConfigVariables.,
+        //            Tidspunkt = DateTime.Now,
+        //        }, new OpdaterSagIndeksInputType() {
+        //            AttributListe = new AttributListeType1() {
+        //                Egenskaber = new[] { new EgenskaberType1() {
+        //                    BrugervendtNoegle = ConfigVariables.,
+        //                    Beskrivelse = ConfigVariables.,
+        //                    Kassationskode = ConfigVariables.,
+        //                    Titel = ConfigVariables.,
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
 
-                            },
-                            Sagsnummer = ConfigVariables.,
-                            AfleveretIndikator = true,
-                            HjemmelSpecifikation = ConfigVariables.,
-                            OffentlighedUndtaget = new OffentlighedUndtagetType() {
-                                OffentlighedUndtagetHjemmelTekst = ConfigVariables.,
-                                TitelAlternativTekst = ConfigVariables.
-                            },
-                            PrincipielIndikator = true,
-                            AfleveretIndikatorSpecified = true,
-                            PrincipielIndikatorSpecified = true,
-                        }
-                        },
-                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                            Any = new [] {
-                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                            },
-                            SenestAendretTidspunkt = DateTime.Now,
-                            SenestAendretTidspunktSpecified = true
-                        },
-                    },
-                    TilstandListe = new TilstandListeType1() {
-                        Fremdrift = new[] { new FremdriftType1() {
-                            FremdriftStatusKode = FremdriftStatusKodeType1.Afgjort,
-                            FremdriftStatusKodeSpecified = true,
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
-                            },
-                        }
-                        },
-                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                            Any = new [] {
-                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                            },
-                            SenestAendretTidspunkt = DateTime.Now,
-                            SenestAendretTidspunktSpecified = true
-                        },
-                    },
-                    RelationListe = new RelationListeType1() {
-                        Sagsaktoer = new[] { new RelationType() {
-                            Indeks = ConfigVariables.,
-                            Rolle = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Type = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            ReferenceID = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
-                            },
-                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                                Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                                },
-                                SenestAendretTidspunkt = DateTime.Now,
-                                SenestAendretTidspunktSpecified = true
-                            },
-                        }
-                        },
-                        Sagsklasse = new[] { new RelationType() {
-                            Indeks = ConfigVariables.,
-                            Rolle = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Type = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            ReferenceID = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
+        //                    },
+        //                    Sagsnummer = ConfigVariables.,
+        //                    AfleveretIndikator = true,
+        //                    HjemmelSpecifikation = ConfigVariables.,
+        //                    OffentlighedUndtaget = new OffentlighedUndtagetType() {
+        //                        OffentlighedUndtagetHjemmelTekst = ConfigVariables.,
+        //                        TitelAlternativTekst = ConfigVariables.
+        //                    },
+        //                    PrincipielIndikator = true,
+        //                    AfleveretIndikatorSpecified = true,
+        //                    PrincipielIndikatorSpecified = true,
+        //                }
+        //                },
+        //                LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                    Any = new [] {
+        //                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                    },
+        //                    SenestAendretTidspunkt = DateTime.Now,
+        //                    SenestAendretTidspunktSpecified = true
+        //                },
+        //            },
+        //            TilstandListe = new TilstandListeType1() {
+        //                Fremdrift = new[] { new FremdriftType1() {
+        //                    FremdriftStatusKode = FremdriftStatusKodeType1.Afgjort,
+        //                    FremdriftStatusKodeSpecified = true,
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
+        //                    },
+        //                }
+        //                },
+        //                LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                    Any = new [] {
+        //                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                    },
+        //                    SenestAendretTidspunkt = DateTime.Now,
+        //                    SenestAendretTidspunktSpecified = true
+        //                },
+        //            },
+        //            RelationListe = new RelationListeType1() {
+        //                Sagsaktoer = new[] { new RelationType() {
+        //                    Indeks = ConfigVariables.,
+        //                    Rolle = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Type = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    ReferenceID = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
+        //                    },
+        //                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                        Any = new [] {
+        //                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                        },
+        //                        SenestAendretTidspunkt = DateTime.Now,
+        //                        SenestAendretTidspunktSpecified = true
+        //                    },
+        //                }
+        //                },
+        //                Sagsklasse = new[] { new RelationType() {
+        //                    Indeks = ConfigVariables.,
+        //                    Rolle = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Type = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    ReferenceID = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
 
-                            },
-                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                                Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                                },
-                                SenestAendretTidspunkt = DateTime.Now,
-                                SenestAendretTidspunktSpecified = true
-                            },
-                        }
-                        },
-                        Sagspart = new[] { new RelationType() {
-                            Indeks = ConfigVariables.,
-                            Rolle = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Type = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            ReferenceID = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
+        //                    },
+        //                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                        Any = new [] {
+        //                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                        },
+        //                        SenestAendretTidspunkt = DateTime.Now,
+        //                        SenestAendretTidspunktSpecified = true
+        //                    },
+        //                }
+        //                },
+        //                Sagspart = new[] { new RelationType() {
+        //                    Indeks = ConfigVariables.,
+        //                    Rolle = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Type = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    ReferenceID = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
 
-                            },
-                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                                Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                                },
-                                SenestAendretTidspunkt = DateTime.Now,
-                                SenestAendretTidspunktSpecified = true
-                            },
-                        }
-                        },
-                        Journalpost = new[] { new JournalpostRelationType() {
-                            Indeks = ConfigVariables.,
-                            Rolle = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Type = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            ReferenceID = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
+        //                    },
+        //                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                        Any = new [] {
+        //                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                        },
+        //                        SenestAendretTidspunkt = DateTime.Now,
+        //                        SenestAendretTidspunktSpecified = true
+        //                    },
+        //                }
+        //                },
+        //                Journalpost = new[] { new JournalpostRelationType() {
+        //                    Indeks = ConfigVariables.,
+        //                    Rolle = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Type = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    ReferenceID = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
 
-                            },
-                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                                Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                                },
-                                SenestAendretTidspunkt = DateTime.Now,
-                                SenestAendretTidspunktSpecified = true
-                            },
-                            JournalpostEgenskaber = new JournalpostEgenskaberType() {
-                                Dokumenttitel = ConfigVariables.,
-                                OffentlighedUndtaget = new OffentlighedUndtagetType() {
-                                    OffentlighedUndtagetHjemmelTekst = ConfigVariables.,
-                                    TitelAlternativTekst = ConfigVariables.
-                                },
-                                JournalnotatEgenskaber = new JournalnotatEgenskaberType() {
-                                    Format = ConfigVariables.,
-                                    Notat = new byte[] {},
-                                    Titel = ConfigVariables.,
-                                },
-                            }
-                        }
-                        },
-                        LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                            Any = new [] {
-                                (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                            },
-                            SenestAendretTidspunkt = DateTime.Now,
-                            SenestAendretTidspunktSpecified = true
-                        },
-                        Sagsgenstande = new[] { new RelationType() {
-                            Indeks = ConfigVariables.,
-                            Rolle = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Type = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            ReferenceID = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
+        //                    },
+        //                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                        Any = new [] {
+        //                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                        },
+        //                        SenestAendretTidspunkt = DateTime.Now,
+        //                        SenestAendretTidspunktSpecified = true
+        //                    },
+        //                    JournalpostEgenskaber = new JournalpostEgenskaberType() {
+        //                        Dokumenttitel = ConfigVariables.,
+        //                        OffentlighedUndtaget = new OffentlighedUndtagetType() {
+        //                            OffentlighedUndtagetHjemmelTekst = ConfigVariables.,
+        //                            TitelAlternativTekst = ConfigVariables.
+        //                        },
+        //                        JournalnotatEgenskaber = new JournalnotatEgenskaberType() {
+        //                            Format = ConfigVariables.,
+        //                            Notat = new byte[] {},
+        //                            Titel = ConfigVariables.,
+        //                        },
+        //                    }
+        //                }
+        //                },
+        //                LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                    Any = new [] {
+        //                        (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                    },
+        //                    SenestAendretTidspunkt = DateTime.Now,
+        //                    SenestAendretTidspunktSpecified = true
+        //                },
+        //                Sagsgenstande = new[] { new RelationType() {
+        //                    Indeks = ConfigVariables.,
+        //                    Rolle = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Type = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    ReferenceID = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
 
-                            },
-                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                                Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                                },
-                                SenestAendretTidspunkt = DateTime.Now,
-                                SenestAendretTidspunktSpecified = true
-                            },
-                        }
-                        },
-                        Sagsrelation = new[] { new RelationType() {
-                            Indeks = ConfigVariables.,
-                            Rolle = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Type = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            ReferenceID = new UnikIdType() {
-                                Item = ConfigVariables.,
-                                ItemElementName = ItemChoiceType.UUIDIdentifikator
-                            },
-                            Virkning = new VirkningType() {
-                                NoteTekst = ConfigVariables.,
-                                AktoerTypeKode = AktoerTypeKodeType.Bruger,
-                                AktoerTypeKodeSpecified = true,
-                                AktoerRef = new UnikIdType() {
-                                    Item = ConfigVariables.,
-                                    ItemElementName = ItemChoiceType.UUIDIdentifikator
-                                },
-                                FraTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now
-                                },
-                                TilTidspunkt = new TidspunktType() {
-                                    Item = DateTime.Now.AddDays(1)
-                                },
+        //                    },
+        //                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                        Any = new [] {
+        //                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                        },
+        //                        SenestAendretTidspunkt = DateTime.Now,
+        //                        SenestAendretTidspunktSpecified = true
+        //                    },
+        //                }
+        //                },
+        //                Sagsrelation = new[] { new RelationType() {
+        //                    Indeks = ConfigVariables.,
+        //                    Rolle = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Type = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    ReferenceID = new UnikIdType() {
+        //                        Item = ConfigVariables.,
+        //                        ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                    },
+        //                    Virkning = new VirkningType() {
+        //                        NoteTekst = ConfigVariables.,
+        //                        AktoerTypeKode = AktoerTypeKodeType.Bruger,
+        //                        AktoerTypeKodeSpecified = true,
+        //                        AktoerRef = new UnikIdType() {
+        //                            Item = ConfigVariables.,
+        //                            ItemElementName = ItemChoiceType.UUIDIdentifikator
+        //                        },
+        //                        FraTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now
+        //                        },
+        //                        TilTidspunkt = new TidspunktType() {
+        //                            Item = DateTime.Now.AddDays(1)
+        //                        },
 
-                            },
-                            LokalUdvidelseListe = new LokalUdvidelseListeType() {
-                                Any = new [] {
-                                    (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
-                                },
-                                SenestAendretTidspunkt = DateTime.Now,
-                                SenestAendretTidspunktSpecified = true
-                            },
-                        }
-                        },
-                    },
-                    UdenNotifikation = true,
-                    UdenNotifikationSpecified = true,
-                    NoteTekst = ConfigVariables.,
-                    Tidspunkt = DateTime.Now,
-                    UUIDIdentifikator = ConfigVariables.,
-                }
-                }
-            };
+        //                    },
+        //                    LokalUdvidelseListe = new LokalUdvidelseListeType() {
+        //                        Any = new [] {
+        //                            (new System.Xml.XmlDocument()).CreateElement(ConfigVariables.)
+        //                        },
+        //                        SenestAendretTidspunkt = DateTime.Now,
+        //                        SenestAendretTidspunktSpecified = true
+        //                    },
+        //                }
+        //                },
+        //            },
+        //            UdenNotifikation = true,
+        //            UdenNotifikationSpecified = true,
+        //            NoteTekst = ConfigVariables.,
+        //            Tidspunkt = DateTime.Now,
+        //            UUIDIdentifikator = ConfigVariables.,
+        //        }
+        //        }
+        //    };
 
-            return Port.opdater(request);
-        }
+        //    return Port.opdater(request);
+        //}
 
 
         /// <summary>

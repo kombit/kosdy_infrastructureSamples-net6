@@ -11,12 +11,12 @@ namespace Kombit.InfrastructureSamples.UnitTests
         /// <summary>
         /// Removes any existing case before testing to ensure test of Importer does not fail 
         /// </summary>
-        [TestInitialize]
-        public void TestInitialize()
-        {
-            var sagdokumentIndeks = new SagDokumentIndeks.SagDokumentIndeks();
-            sagdokumentIndeks.Fjern(ConfigVariables.UUID);
-        }
+        //[TestInitialize]
+        //public void TestInitialize()
+        //{
+        //    var sagdokumentIndeks = new SagDokumentIndeks.SagDokumentIndeks();
+        //    sagdokumentIndeks.Fjern(ConfigVariables.UUID);
+        //}
 
         /// <summary>
         /// Test method for SagdokumentIndeks
@@ -70,6 +70,37 @@ namespace Kombit.InfrastructureSamples.UnitTests
             Assert.IsNotNull(virksomhedUuid);
             Assert.IsNotNull(organisationUuid);
             Assert.IsNotNull(organisationNavn);
+        }
+
+        /// <summary>
+        /// Test method for YdelsesIndeks
+        /// The test ensures that scenarios 1-4 returns Statuskode 20 which equals OK. 
+        /// </summary>
+        [TestMethod]
+        public void ImporterYdelse_ShouldPassWithCode20()
+        {
+            //Arrange
+            var ydelseIndeks = new YdelsesIndeks.YdelseIndeks();
+            //Act 
+            YdelseIndeksService.importerResponse importerResponse = ydelseIndeks.importer();
+            //Assert
+            Assert.AreEqual(importerResponse.ImporterYdelseIndeksOutput.Items.Length, 2);
+            foreach (YdelseIndeksService.StandardReturType standardReturType in importerResponse.ImporterYdelseIndeksOutput.Items)
+            {
+                Assert.AreEqual(standardReturType.StatusKode, "20");
+                Assert.AreEqual(standardReturType.FejlbeskedTekst, "OK");
+                Assert.AreEqual(standardReturType.DetaljeretFejlbesked, null);
+            }
+
+            //Arrange
+            var bevillingIndeks = new BevillingIndeks.BevillingIndeks();
+            //Act
+            BevillingIndeksService.fjernResponse fjernResponse = bevillingIndeks.fjern();
+            //Assert
+            Assert.AreEqual(fjernResponse.FjernOutput.StandardRetur.StatusKode, "20");
+            Assert.AreEqual(fjernResponse.FjernOutput.StandardRetur.FejlbeskedTekst, "OK");
+            Assert.AreEqual(fjernResponse.FjernOutput.StandardRetur.DetaljeretFejlbesked, null);
+
         }
     }
 }
