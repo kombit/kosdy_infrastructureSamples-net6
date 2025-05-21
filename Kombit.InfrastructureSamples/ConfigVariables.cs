@@ -13,6 +13,7 @@ namespace Kombit.InfrastructureSamples {
         public const string ConfigurationSectionNameForSagsDokumentIndeks = "oioIdwsSagsDokumentIndeksConfiguration";
         public const string ConfigurationSectionNameForYdelseIndeks = "oioIdwsYdelseIndeksConfiguration";
         public const string ConfigurationSectionNameForBevilling = "oioIdwsBevillingConfiguration";
+        public const string ConfigurationSectionNameForOekonomiskEffektuering = "oioIdwsOekonomiskEffektueringConfiguration";
 
         #endregion
 
@@ -155,7 +156,7 @@ namespace Kombit.InfrastructureSamples {
         public const string YDELSEEFFEKTUERING_AKTOER_TYPE_KODE = "Bruger"; // ydelseseffektueringAktoerTypeKode
         public const string EFFEKTUERING_EJER_AKTOER_TYPE_KODE = "Bruger"; // effektueringEjerAktoerTypeKode
         public const string EFFEKTUERINGS_MODTAGER_AKTOER_TYPE_KODE = "Bruger"; // effektueringsmodtagerAktoerTypeKode
-        public const string YDELSESMODTAGER_AKTOER_TYPE_KODE = "ÆØÅ"; // ydelsesmodtagerAktoerTypeKode
+        public const string YDELSESMODTAGER_AKTOER_TYPE_KODE = "Bruger"; // ydelsesmodtagerAktoerTypeKode
         public const string BEVILLING_YDELSESMODTAGER_ROLLE_UUID = "93af57a7-7658-4fac-98da-9e5ac7a7d9a5"; // bevillingYdelsesmodtagerRolleUuid
         public const string BEVILLING_YDELSESMODTAGER_TYPE_UUID = "c59f1523-1786-48c7-baff-466de1db3320"; // bevillingYdelsesmodtagerTypeUuid
         public const string YDELSESMODTAGER_INDEKS = "1"; // ydelsesmodtagerIndeks
@@ -197,7 +198,7 @@ namespace Kombit.InfrastructureSamples {
         public const string YDELSEEFFEKTUERING_YDELSESPERIODE_SLUTDATO = "2024-01-31T14:54:23.234+01:00"; // ydelseseffektueringYdelsesperiodeSlutdato
         public const string YDELSEEFFEKTUERING_YDELSESBELOEB = "5.942"; // ydelseseffektueringYdelsesbeloeb
         public const string YDELSEEFFEKTUERING_KLASSIFIKATIONSBESKRIVELSE = "32.03.04"; // ydelseseffektueringKlassifikationsbeskrivelse
-        public const string YDELSEEFFEKTUERING_BEVILGET_YDELSE_REF_UUID_IDENTIFIKATOR = "2222aaaa-22aa-33bb-44cc-222222aaaaaa"; // ydelseseffektueringBevilgetYdelseRefUUIDIdentifikator
+        public const string YDELSEEFFEKTUERING_BEVILGET_YDELSE_REF_UUID_IDENTIFIKATOR = "9222aaaa-22aa-33bb-44cc-222222aaaaaa"; // ydelseseffektueringBevilgetYdelseRefUUIDIdentifikator
         public const string YDELSEEFFEKTUERING_BEVILGET_YDELSE_REF_BEVILGET_YDELSE_ID = "1"; // ydelseseffektueringBevilgetYdelseRefBevilgetYdelseId
         public const string EFFEKTUERING_EJER_FULDT_NAVN = "Korsbaek Kommune"; // effektueringEjerFuldtNavn
         public const string EFFEKTUERING_EJER_CVR_NR = "11111111"; // effektueringEjerCVRNr
@@ -224,14 +225,14 @@ namespace Kombit.InfrastructureSamples {
         public const string EFFEKTUERINGS_PLAN_FORUD_BAGUD = "Bagud"; // effektueringsplanForudBagud
         public const string EFFEKTUERINGS_PLAN_DISPOSITIONSDAG = "Sidste bankdag i måneden"; // effektueringsplanDispositionsdag
         public const string EFFEKTUERINGS_PLAN_YDELSESBELOEB = "6694"; // effektueringsplanYdelsesbeloeb
-        public const string BEVILLINGS_SAG_VIRKNING_FRA = "ÆØÅ"; // bevillingssagVirkningFra
-        public const string BEVILLINGS_SAG_AKTOER_REF = "ÆØÅ"; // bevillingssagAktoerRef
-        public const string YDELSESMODTAGER_VIRKNING_FRA = "ÆØÅ"; // ydelsesmodtagerVirkningFra
-        public const string YDELSESMODTAGER_AKTOER_REF = "ÆØÅ"; // ydelsesmodtagerAktoerRef
+        public const string BEVILLINGS_SAG_VIRKNING_FRA = "2024-01-01T14:54:23.234+01:00"; // bevillingssagVirkningFra
+        public const string BEVILLINGS_SAG_AKTOER_REF = "9999aaaa-11aa-22bb-33cc-111111aaaaaa"; // bevillingssagAktoerRef
+        public const string YDELSESMODTAGER_VIRKNING_FRA = "2024-01-01T14:54:23.234+01:00"; // ydelsesmodtagerVirkningFra
+        public const string YDELSESMODTAGER_AKTOER_REF = "9999aaaa-11aa-22bb-33cc-111111aaaaaa"; // ydelsesmodtagerAktoerRef
         public const string BEVILLING_EJER_BRUGERVENDT_NOEGLE = "ÆØÅ"; // bevillingEjerBrugervendtNoegle
-        public const string BEVILLING_EJER_VIRKNING_FRA = "ÆØÅ"; // bevillingEjerVirkningFra
-        public const string BEVILLING_EJER_AKTOER_REF = "ÆØÅ"; // bevillingEjerAktoerRef
-        public const string BEVILLING_ANSVARLIG_VIRKNING_FRA = "ÆØÅ"; // bevillingAnsvarligVirkningFra
+        public const string BEVILLING_EJER_VIRKNING_FRA = "2024-01-01T14:54:23.234+01:00"; // bevillingEjerVirkningFra
+        public const string BEVILLING_EJER_AKTOER_REF = "9999aaaa-11aa-22bb-33cc-111111aaaaaa"; // bevillingEjerAktoerRef
+        public const string BEVILLING_ANSVARLIG_VIRKNING_FRA = "2024-01-01T14:54:23.234+01:00"; // bevillingAnsvarligVirkningFra
         public const string BEVILLING_ANSVARLIG_AKTOER_REF = "9999aaaa-11aa-22bb-33cc-111111aaaaaa"; // bevillingAnsvarligAktoerRef
         public const string YDELSE_INDEKS = "1"; // ydelseIndeks
         public const string SECURITY_PROFILE_ROLE = "4becdcec-c8bd-44a4-ac0b-5a0162986840"; //

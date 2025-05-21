@@ -79,6 +79,13 @@ namespace Kombit.InfrastructureSamples.UnitTests
         [TestMethod]
         public void ImporterYdelse_ShouldPassWithCode20()
         {
+            //Cleanup
+            var bevillingIndeks = new BevillingIndeks.BevillingIndeks();
+            var oekonomiskEffektueringIndeks = new OekonomiskEffektueringIndeks.OekonomiskEffektueringIndeks();
+            //Act
+            BevillingIndeksService.fjernResponse fjernResponse = bevillingIndeks.fjern();
+            OekonomiskEffektueringIndeksService.fjernResponse fjernResponseOekonomiskEffektuering = oekonomiskEffektueringIndeks.fjern();
+
             //Arrange
             var ydelseIndeks = new YdelsesIndeks.YdelseIndeks();
             //Act 
@@ -92,14 +99,29 @@ namespace Kombit.InfrastructureSamples.UnitTests
                 Assert.AreEqual(standardReturType.DetaljeretFejlbesked, null);
             }
 
-            //Arrange
-            var bevillingIndeks = new BevillingIndeks.BevillingIndeks();
+            YdelseIndeksService.opdaterResponse opdaterResponse = ydelseIndeks.opdater();
+            //Assert
+            Assert.AreEqual(opdaterResponse.OpdaterYdelseIndeksOutput.Items.Length, 2);
+            foreach (YdelseIndeksService.StandardReturType standardReturType in opdaterResponse.OpdaterYdelseIndeksOutput.Items)
+            {
+                Assert.AreEqual(standardReturType.StatusKode, "20");
+                Assert.AreEqual(standardReturType.FejlbeskedTekst, "OK");
+                Assert.AreEqual(standardReturType.DetaljeretFejlbesked, null);
+            }
+
             //Act
-            BevillingIndeksService.fjernResponse fjernResponse = bevillingIndeks.fjern();
+            fjernResponse = bevillingIndeks.fjern();
             //Assert
             Assert.AreEqual(fjernResponse.FjernOutput.StandardRetur.StatusKode, "20");
             Assert.AreEqual(fjernResponse.FjernOutput.StandardRetur.FejlbeskedTekst, "OK");
             Assert.AreEqual(fjernResponse.FjernOutput.StandardRetur.DetaljeretFejlbesked, null);
+
+            //Act
+            fjernResponseOekonomiskEffektuering = oekonomiskEffektueringIndeks.fjern();
+            //Assert
+            Assert.AreEqual(fjernResponseOekonomiskEffektuering.FjernOutput.StandardRetur.StatusKode, "20");
+            Assert.AreEqual(fjernResponseOekonomiskEffektuering.FjernOutput.StandardRetur.FejlbeskedTekst, "OK");
+            Assert.AreEqual(fjernResponseOekonomiskEffektuering.FjernOutput.StandardRetur.DetaljeretFejlbesked, null);
 
         }
     }
