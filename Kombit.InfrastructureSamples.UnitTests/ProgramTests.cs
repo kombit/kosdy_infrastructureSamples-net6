@@ -109,6 +109,28 @@ namespace Kombit.InfrastructureSamples.UnitTests
                 Assert.AreEqual(standardReturType.DetaljeretFejlbesked, null);
             }
 
+            YdelseIndeksService.fremsoegResponse fremsoegResponse = ydelseIndeks.fremsoeg();
+
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.StandardRetur.StatusKode, "20");
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.StandardRetur.FejlbeskedTekst, "OK");
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.StandardRetur.DetaljeretFejlbesked, null);
+
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.Antal[0].Element, Kombit.InfrastructureSamples.YdelseIndeksService.AntalTypeElement.bevillinger);
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.Antal[0].Antal, "1");
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.Antal[1].Element, Kombit.InfrastructureSamples.YdelseIndeksService.AntalTypeElement.effektueringer);
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.Antal[1].Antal, "1");
+
+            fremsoegResponse = ydelseIndeks.fremsoegNOT();
+
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.StandardRetur.StatusKode, "20");
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.StandardRetur.FejlbeskedTekst, "OK");
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.StandardRetur.DetaljeretFejlbesked, null);
+
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.Antal[0].Element, Kombit.InfrastructureSamples.YdelseIndeksService.AntalTypeElement.bevillinger);
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.Antal[0].Antal, "0");
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.Antal[1].Element, Kombit.InfrastructureSamples.YdelseIndeksService.AntalTypeElement.effektueringer);
+            Assert.AreEqual(fremsoegResponse.FremsoegYdelseIndeksOutput.Antal[1].Antal, "1");
+
             //Act
             fjernResponse = bevillingIndeks.fjern();
             //Assert
